@@ -31,6 +31,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['8000-firstnamejo-nfltailgate-ps8ft99hpoa.ws-eu108.gitpod.io', '.herokuapp.com']
 
+# Add CSRF_TRUSTED_ORIGINS here
+CSRF_TRUSTED_ORIGINS = ['https://8000-firstnamejo-nfltailgate-ps8ft99hpoa.ws-eu108.gitpod.io']
 
 # Application definition
 
