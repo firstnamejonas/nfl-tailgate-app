@@ -21,7 +21,6 @@
           <i class="fa-solid fa-user"></i>
         </button>
         <ul class="dropdown-menu">
-          <li>Hi {{ user.username }}!</li>
           <li>Your Profile</li>
           <li>
             <form action="{% url 'logout' %}" method="post">
@@ -30,6 +29,7 @@
             </form>
           </li>
         </ul>
+        Welcome back, {{ user.username }}!
       </div>
     </div>
   </nav>
