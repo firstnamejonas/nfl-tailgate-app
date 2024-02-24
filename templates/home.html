@@ -1,16 +1,7 @@
 {% extends "base.html" %}
 
-{% block title %}Home{% endblock %}
+{% block title %}Home | NFL Tailgate{% endblock %}
 
 {% block content %}
-{% if user.is_authenticated %}
-Hi {{ user.username }}!
-<form action="{% url 'logout' %}" method="post">
-    {% csrf_token %}
-    <button type="submit" class="btn btn-primary">Log Out</button>
-</form>
-{% else %}
-<p>You are not logged in</p>
-<a href="{% url 'login' %}">Log In</a>
-{% endif %}
+<!--Content-->
 {% endblock %}
