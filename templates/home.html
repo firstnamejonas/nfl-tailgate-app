@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}Home{% endblock %}
 
@@ -6,17 +7,24 @@
 
 <div class="container" id="hero-section">
     <div class="row">
-        <div class="col">
-            <h1>
+        <div class="col text-center" id="hero-section-text">
+            <h1 class="hero-section-heading-one">
                 Welcome to the NFL Tailgate App!
             </h1>
-            <h2>Couldn't make it to the game?</h2>
-            <p>
+            <h2 class="hero-section-heading-two">
+                Couldn't make it to the game? <span class="text-highlights">We got you!</span>
+            </h2>
+            <p class="hero-section-paragraph">
                 The NFL Tailgate App is the ultimate platform for NFL fans to connect, 
                 support their favorite teams, and interact with like-minded individuals. 
                 Whether you're a passionate football fan or simply love the atmosphere of tailgating, 
                 our app provides everything you need to make the most out of the NFL season.
             </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col text-center">
+            <img id="wireframe-image" src="{% static 'images/example_mockup_nfl_tailgate_app.png' %}" alt="Image of a wireframe of the NFL Tailgate App">
         </div>
     </div>
 </div>
