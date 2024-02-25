@@ -1,15 +1,42 @@
-* {
-    background-color: #212529;
-    color: #fafafa;
-}
+/*------------------------------------------------------------------------------- General: */
 
 body {
     padding-top: 56px;
     background-color: #212529 !important;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+    color: #fafafa !important;
+}
+
+.text-highlights {
+    color: #0C6DFD;
+}
+
+/*------------------------------------------------------------------------------- Hero-Section (Home): */
+
 #hero-section {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+}
+
+#hero-section-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-section-heading-one, .hero-section-heading-two {
+    margin: 0 0 30px;
+}
+
+.hero-section-paragraph {
+    margin: 0 0 30px;
+}
+
+#wireframe-image {
+    max-width: 350px;
 }
