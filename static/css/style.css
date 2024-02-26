@@ -2,6 +2,7 @@
 
 body {
     padding-top: 56px;
+    background-color: #212529 !important;
 }
 
 .text-highlights {
@@ -13,8 +14,10 @@ body {
 /*------------------------------------------------------------------------------- Hero-Section (Home): */
 
 #hero-section {
-    min-height: 100vh;
     margin: 50px auto;
+    border-radius: 10px;
+    background-color: #fafafa;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.8);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,7 +35,8 @@ body {
 }
 
 .hero-section-paragraph {
-    margin: 0 0 30px;
+    margin: 0 auto 30px;
+    width: 70%;
 }
 
 #wireframe-image {
