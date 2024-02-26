@@ -5,13 +5,15 @@
 {% block content %}
 <section class="form-section">
   <div class="container w-75 form-container">
-    <h2>Login</h2>
+    <h2 class="form-heading mb-5">Login</h2>
     <form method="post">
       {% csrf_token %}
       {{ form|crispy }}
-      <p>Don't have an account yet? Click <a href="/accounts/signup">here </a>!</p>
-      <button type="submit" class="btn btn-primary">Login</button>
+      <div class="d-grid gap-2">
+        <button class="btn btn-primary" type="submit">Login</button>
+      </div>
     </form>
+    <p class="mt-5 form-paragraph">Don't have an account yet? Click <a href="/accounts/signup">here </a>!</p>
   </div>
 </section>
 {% endblock %}
