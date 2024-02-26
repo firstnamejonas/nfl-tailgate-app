@@ -32,7 +32,12 @@
                 <a class="btn btn-outline-primary" href="{% url 'home' %}" role="button">Home</a>
                 <a class="btn btn-outline-primary" href="#" role="button">All Chats</a>
                 <a class="btn btn-outline-primary" href="#" role="button">Your Profile</a>
-                <a class="btn btn-primary" href="#" role="button">Logout</a>
+                <form action="{% url 'logout' %}" method="post">
+                  {% csrf_token %}
+                  <div class="d-grid gap-2">
+                    <button class="btn btn-primary" type="submit">Logout</button>
+                  </div>
+                </form>
               </div>
             </li>
           </ul>
