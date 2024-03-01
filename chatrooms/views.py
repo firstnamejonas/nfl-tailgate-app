@@ -1,3 +1,4 @@
-from django.shortcuts import render
+from django.contrib import admin
+from .models import Team, Room
 
-# Create your views here.
+admin.site.register(Room)
