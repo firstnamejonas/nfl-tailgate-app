@@ -4,4 +4,34 @@
 {% block title %}All Chatrooms{% endblock %}
 
 {% block content %}
+<section class="chatrooms-section">
+    {% for room in rooms %}
+            <div class="container text-center chatrooms-container">
+                {% if room.team %}
+                    <div class="row chatrooms">
+                        <div class="col-2">
+                            <img src="{{ room.team.logo.url }}" alt="{{ room.team.name }}" style="max-width: 30px;">
+                        </div>
+                        <div class="col-5">
+                            <p class="text-start chatroom-name">{{ room.name }}</p>
+                        </div>
+                        <div class="col-5 text-end">
+                            <a class="btn btn-primary btn-sm" href="#" role="button">Open Chat</a>
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="row chatrooms">
+                        <div class="col-2">
+                        </div>
+                        <div class="col-5">
+                            <p class="text-start chatroom-name">{{ room.name }}</p>
+                        </div>
+                        <div class="col-5 text-end">
+                            <a class="btn btn-primary btn-sm" href="#" role="button">Open Chat</a>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+    {% endfor %}
+</section>
 {% endblock %}
