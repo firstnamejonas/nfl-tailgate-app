@@ -1,7 +1,7 @@
 /*------------------------------------------------------------------------------- General: */
 
 body {
-    padding-top: 56px;
+    padding-top: 66.9px;
     background-color: #212529 !important;
 }
 
@@ -99,4 +99,30 @@ body {
 
 .form-paragraph {
     text-align: center;
+}
+
+/*------------------------------------------------------------------------------- Chatrooms Page: */
+
+.chatrooms-section {
+    min-height: 100vh;
+    margin: 50px auto;
+}
+
+.chatrooms-container {
+    margin-top: 20px;
+    width: 95% !important;
+}
+
+.chatrooms {
+    border: 1px solid #0C6DFD;
+    border-radius: 10px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chatroom-name {
+    color: #fafafa;
+    margin: 0;
 }
