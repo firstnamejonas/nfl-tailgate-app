@@ -126,3 +126,9 @@ body {
     color: #fafafa;
     margin: 0;
 }
+
+.category-heading {
+    color: #fafafa;
+    text-align: center;
+    margin: 20px auto;
+}
