@@ -3,4 +3,5 @@ from .models import Room
 
 def room_list(request):
     rooms = Room.objects.all()
-    return render(request, 'chatrooms.html', {'rooms': rooms})
+    categories = set(room.category for room in rooms)
+    return render(request, 'chatrooms.html', {'rooms': rooms, 'categories': categories})
