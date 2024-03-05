@@ -132,3 +132,20 @@ body {
     text-align: center;
     margin: 20px auto;
 }
+
+/*------------------------------------------------------------------------------- User Page: */
+
+.container-background {
+    background-color: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8), 0 6px 20px 0 rgba(0, 0, 0, 0.8);
+}
+
+.profile-picture {
+    max-width: 200px;
+    border-radius: 50%;
+}
+
+.instructions-profile-picture-change {
+    margin: 0;
+}
