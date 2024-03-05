@@ -1,7 +1,45 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% block title %}Your Profile{% endblock %}
 
 {% block content %}
+<section class="chatrooms-section">
+    <h2>Profile</h2>
+    <div class="container container-background text-center">
+        <div class="row">
+            <div class="col mt-5">
+                <img class="profile-picture" src="{{ profile.picture.url }}" alt="Profile Picture">
+            </div>
+            <div class="col text-start mt-5">
+                <p class="instructions-profile-picture-change">Change your profile picture here:</p>
+                <small>Note: Only use .jpg or .png files!</small>
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ picture_form.as_p }}
+                    <button class="btn btn-primary" type="submit" name="change_picture">Change Picture</button>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <p>Username: {{ request.user.username }}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                {% if profile.favorite_team %}
+                    <p>Favorite Team: {{ profile.favorite_team }}</p>
+                    <img src="{{ profile.favorite_team.logo.url }}" alt="{{ profile.favorite_team.name }} Logo" style="max-width: 30px;">
+                {% else %}
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ team_form.as_p }}
+                        <button class="btn btn-primary" type="submit" name="save_favorite_team">Save Favorite Team</button>
+                    </form>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}
