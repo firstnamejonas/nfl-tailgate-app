@@ -149,3 +149,9 @@ body {
 .instructions-profile-picture-change {
     margin: 0;
 }
+
+#test {
+    width: 90%;
+    background-color: #fafafa;
+    height: 100vh;
+}
