@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'accounts',
     'chatrooms',
     'userprofile',
+    'chat',
     "crispy_forms",
     "crispy_bootstrap5",
 ]
