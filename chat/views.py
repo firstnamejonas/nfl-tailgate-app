@@ -32,3 +32,17 @@ def edit_message(request, message_id):
 
     return render(request, 'edit_message.html', {'message': message})
 
+@login_required
+def delete_message(request, message_id):
+    message = get_object_or_404(Message, id=message_id)
+    if not message.can_delete(request.user):
+        # Benutzer hat keine Berechtigung, diese Nachricht zu löschen
+        # Hier eine Fehlermeldung anzeigen oder den Benutzer umleiten
+        pass
+
+    if request.method == 'POST':
+        message.delete()
+        return redirect('chat:chat_room', room_slug=message.room.slug)
+
+    return render(request, 'delete_message.html', {'message': message})
+
