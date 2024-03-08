@@ -4,8 +4,12 @@
 
 {% block content %}
 <section class="chatrooms-section">
-    <h2>Profile</h2>
     <div class="container container-background text-center">
+        <div class="row">
+            <div class="col mt-5">
+                <h2>Edit your profile here:</h2>
+            </div>
+        </div> 
         <div class="row">
             <div class="col mt-5">
                 <img class="profile-picture" src="{{ profile.picture.url }}" alt="Profile Picture">
@@ -22,16 +26,16 @@
         </div>
         <hr>
         <div class="row">
-            <div class="col">
-                <p>Username: {{ request.user.username }}</p>
+            <div class="col mt-5">
+                <p><strong>Your Username:</strong> {{ request.user.username }}</p>
             </div>
         </div>
         <div class="row">
-            <div class="col">
+            <div class="col mt-5 mb-5">
                 {% if profile.favorite_team %}
-                    <p>Favorite Team: {{ profile.favorite_team }}</p>
-                    <img src="{{ profile.favorite_team.logo.url }}" alt="{{ profile.favorite_team.name }} Logo" style="max-width: 30px;">
+                    <p><strong>Your Favorite Team:</strong> <img src="{{ profile.favorite_team.logo.url }}" alt="{{ profile.favorite_team.name }} Logo" style="max-width: 30px;"> {{ profile.favorite_team }}</p>
                 {% else %}
+                    <p><strong>Choose Your Favorite Team:</strong></p>
                     <form method="post">
                         {% csrf_token %}
                         {{ team_form.as_p }}
