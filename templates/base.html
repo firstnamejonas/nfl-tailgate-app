@@ -36,9 +36,8 @@
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
               <div class="d-grid gap-2">
-                <a class="btn btn-outline-primary" href="{% url 'home' %}" role="button">Home</a>
-                <a class="btn btn-outline-primary" href="#" role="button">All Chats</a>
-                <a class="btn btn-outline-primary" href="#" role="button">Your Profile</a>
+                <a class="btn btn-outline-primary" href="{% url 'chatrooms' %}" role="button">All Chats</a>
+                <a class="btn btn-outline-primary" href="{% url 'userprofile' %}" role="button">View Profile</a>
                 <form action="{% url 'logout' %}" method="post">
                   {% csrf_token %}
                   <div class="d-grid gap-2">
