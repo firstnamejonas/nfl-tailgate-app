@@ -13,8 +13,14 @@ def chat_room(request, room_slug):
         if content:
             Message.objects.create(room=room, sender=request.user, content=content)
             return redirect('chat:chat_room', room_slug=room_slug)
+
+    for message in messages:
+        message.editable = message.can_edit(request.user)
+        message.deletable = message.can_delete(request.user)
     
     return render(request, 'chat.html', {'room': room, 'messages': messages})
+
+
 @login_required
 def edit_message(request, message_id):
     message = get_object_or_404(Message, id=message_id)
