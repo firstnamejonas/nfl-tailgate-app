@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Edit Message{% endblock %}
+
+{% block content %}
+
+<section id="edit-message">
+    <h2>Edit Message</h2>
+    <form method="post">
+        {% csrf_token %}
+        <textarea name="content" cols="50" rows="2">{{ message.content }}</textarea>
+        <button type="submit">Save Changes</button>
+    </form>
+</section>
+
+{% endblock %}
