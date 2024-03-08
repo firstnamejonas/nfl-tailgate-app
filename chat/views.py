@@ -15,3 +15,20 @@ def chat_room(request, room_slug):
             return redirect('chat:chat_room', room_slug=room_slug)
     
     return render(request, 'chat.html', {'room': room, 'messages': messages})
+@login_required
+def edit_message(request, message_id):
+    message = get_object_or_404(Message, id=message_id)
+    if not message.can_edit(request.user):
+        # Benutzer hat keine Berechtigung, diese Nachricht zu bearbeiten
+        # Hier eine Fehlermeldung anzeigen oder den Benutzer umleiten
+        pass
+
+    if request.method == 'POST':
+        new_content = request.POST.get('content')
+        if new_content:
+            message.content = new_content
+            message.save()
+            return redirect('chat:chat_room', room_slug=message.room.slug)
+
+    return render(request, 'edit_message.html', {'message': message})
+
