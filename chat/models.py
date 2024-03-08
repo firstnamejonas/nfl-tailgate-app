@@ -10,3 +10,9 @@ class Message(models.Model):
 
     def __str__(self):
         return f'{self.sender.username} - {self.timestamp}'
+
+    def can_edit(self, user):
+        return self.sender == user
+
+    def can_delete(self, user):
+        return self.sender == user
