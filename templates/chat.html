@@ -9,12 +9,20 @@
     <h1>Chat Room: {{ room.name }}</h1>
     <div id="messages">
         {% for message in messages %}
-            <p>{{ message.sender.username }} - {{ message.timestamp }}: {{ message.content }}</p>
+            <div>
+                <p>{{ message.sender.username }} - {{ message.timestamp }}: {{ message.content }}</p>
+                {% if message.editable %}
+                    <a href="{% url 'chat:edit_message' message.id %}">Edit</a>
+                {% endif %}
+                {% if message.deletable %}
+                    <a href="{% url 'chat:delete_message' message.id %}">Delete</a>
+                {% endif %}
+            </div>
         {% endfor %}
     </div>
     <form method="post">
         {% csrf_token %}
-        <input type="text" name="content" placeholder="Type your message here" required>
+        <textarea name="content" cols="50" rows="2"></textarea>
         <button type="submit">Send</button>
     </form>
 </section>
