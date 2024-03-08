@@ -5,26 +5,51 @@
 
 {% block content %}
 
-<section id="test">
-    <h1>Chat Room: {{ room.name }}</h1>
-    <div id="messages">
-        {% for message in messages %}
-            <div>
-                <p>{{ message.sender.username }} - {{ message.timestamp }}: {{ message.content }}</p>
-                {% if message.editable %}
-                    <a href="{% url 'chat:edit_message' message.id %}">Edit</a>
-                {% endif %}
-                {% if message.deletable %}
-                    <a href="{% url 'chat:delete_message' message.id %}">Delete</a>
-                {% endif %}
+<section class="chatrooms-section">
+    <div class="container container-background">
+        <!--Chatroom-Heading-->
+        <div class="row">
+            <div class="col mt-5 text-center">
+                <h3>Chat Room: <img src="{{ room.team.logo.url }}" alt="{{ room.team.name }}" style="max-width: 30px;"> {{ room.name }}</h3>
             </div>
-        {% endfor %}
+        </div>
+
+        <!--Chatroom-Messages-->
+        <div class="row mt-5 scroll">
+            {% for message in messages %}
+                <div class="col-12">
+                    <p class="message">
+                        {{ message.sender.username }}:
+                        <br>
+                        {{ message.content }}
+                        <br>
+                        <small>{{ message.timestamp }}</small>
+                        <br>
+                        {% if message.editable %}
+                            <a href="{% url 'chat:edit_message' message.id %}"><i class="fa-solid fa-pen-to-square message-icons"></i></a>
+                        {% endif %}
+                        {% if message.deletable %}
+                            <a href="{% url 'chat:delete_message' message.id %}"><i class="fa-solid fa-trash message-icons"></i></a>
+                        {% endif %}
+                    </p>
+                </div>
+            {% endfor %}
+        </div>
+
+        <!--Chatroom-Message-User-Field-->
+        <form method="post">
+            {% csrf_token %}
+            <div class="row text-center mt-5">
+                <div class="col mb-2">
+                    <textarea name="content" placeholder="Write your message here....."></textarea>
+                </div>
+                <div class="d-grid mb-5">
+                    <button class="btn btn-primary" type="submit">Send!</button>
+                </div>
+            </div>
+        </form>
+
     </div>
-    <form method="post">
-        {% csrf_token %}
-        <textarea name="content" cols="50" rows="2"></textarea>
-        <button type="submit">Send</button>
-    </form>
 </section>
 
 {% endblock %}
