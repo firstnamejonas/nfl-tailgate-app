@@ -39,6 +39,15 @@
             {% endfor %}
         </div>
 
+        <!--Refresh Page for new messages!-->
+        <div class="row mt-2">
+            <div class="col-12 text-center">
+                <small>Please note that you have to refresh the page to see all new messages!</small>
+            </div>
+            <div class="col-12 text-center">
+                <button id="refresh-button" class="btn btn-primary btn-sm">Refresh</button>
+            </div>
+        </div>
         <!--Chatroom-Message-User-Field-->
         <form method="post">
             {% csrf_token %}
