@@ -5,13 +5,27 @@
 
 {% block content %}
 
-<section id="edit-message">
-    <h2>Edit Message</h2>
-    <form method="post">
-        {% csrf_token %}
-        <textarea name="content" cols="50" rows="2">{{ message.content }}</textarea>
-        <button type="submit">Save Changes</button>
-    </form>
+<section class="chatrooms-section">
+    <div class="container container-background text-center">
+        <div class="row">
+            <div class="col-12 mt-5">
+                <h2>Edit your message:</h2>
+            </div>
+            <div class="col-12 mb-2">
+                <i class="fa-solid fa-pen-to-square"></i>
+            </div>
+            <div class="col-12 mb-2">
+                <form method="post">
+                    {% csrf_token %}
+                    <textarea class="text-edit-message" name="content">{{ message.content }}</textarea>
+                    <button class="btn btn-primary" type="submit">Save Changes</button>
+                </form>
+            </div>
+            <div class="col-12 mb-5">
+                <button onclick="goBack()" class="btn btn-outline-primary">Go Back</button>
+            </div>
+        </div>
+    </div>
 </section>
 
 {% endblock %}
