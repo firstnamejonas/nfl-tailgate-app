@@ -30,7 +30,7 @@
                                     <p class="text-start chatroom-name">{{ room.name }}</p>
                                 </div>
                                 <div class="col-5 text-end">
-                                    <a class="btn btn-primary btn-sm" href="#" role="button">Open Chat</a>
+                                    <a class="btn btn-primary btn-sm" href="{% url 'chat:chat_room' room_slug=room.slug %}" role="button">Open Chat</a>
                                 </div>
                             </div>
                         {% endif %}
