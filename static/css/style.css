@@ -179,3 +179,13 @@ textarea {
 .message-icons:hover {
     color: #212529;
 }
+
+/*------------------------------------------------------------------------------- Edit Message Page: */
+
+.text-edit-message {
+    background: transparent;
+    border: 1px solid #0C6DFD;
+    border-radius: 10px;
+    width: 100%;
+    height: 100px;
+}
