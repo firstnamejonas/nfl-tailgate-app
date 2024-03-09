@@ -9,8 +9,11 @@
     <div class="container container-background">
         <!--Chatroom-Heading-->
         <div class="row">
-            <div class="col mt-5 text-center">
-                <h3>Chat Room: <img src="{{ room.team.logo.url }}" alt="{{ room.team.name }}" style="max-width: 30px;"> {{ room.name }}</h3>
+            <div class="col mt-5">
+                <h3>Chatroom: <img src="{{ room.team.logo.url }}" alt="{{ room.team.name }}" style="max-width: 30px;">{{ room.name }}</h3>
+            </div>
+            <div class="col mt-5 text-end">
+                <a class="btn btn-primary btn-sm" href="{% url 'chatrooms' %}" role="button">Back to all Chats</a>
             </div>
         </div>
 
