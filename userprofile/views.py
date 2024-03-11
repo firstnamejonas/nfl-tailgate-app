@@ -5,6 +5,16 @@ from .models import Profile
 
 @login_required
 def user_profile(request):
+    """
+    Summary:
+    Renders the user profile page and handles profile updates.
+
+    Parameters:
+    request (HttpRequest): The HTTP request object.
+
+    Returns:
+    HttpResponse: The HTTP response object containing the rendered user profile page.
+    """
     profile = request.user.profile
     if request.method == 'POST':
         if 'change_picture' in request.POST:

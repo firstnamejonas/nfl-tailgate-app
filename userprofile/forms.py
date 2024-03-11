@@ -3,11 +3,19 @@ from .models import Profile
 from chatrooms.models import Team
 
 class ProfilePictureForm(forms.ModelForm):
+    """
+    Summary:
+    Form for updating profile picture.
+    """
     class Meta:
         model = Profile
         fields = ['picture']
 
 class FavoriteTeamForm(forms.ModelForm):
+    """
+    Summary:
+    Form for selecting favorite team in profile.
+    """
     class Meta:
         model = Profile
         fields = ['favorite_team']
