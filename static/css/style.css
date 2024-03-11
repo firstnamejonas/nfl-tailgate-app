@@ -88,13 +88,12 @@ body {
     color: #fafafa;
 }
 
-/*------------------------------------------------------------------------------- Signup: */
-
-/*------------------------------------------------------------------------------- Form (Signup): */
+/*------------------------------------------------------------------------------- Signup / Login: */
 
 .form-section {
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
