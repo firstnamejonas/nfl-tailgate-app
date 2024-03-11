@@ -31,6 +31,12 @@
                 alt="Image of a wireframe of the NFL Tailgate App" class="mb-5">
         </div>
     </div>
+    <div class="row mb-5">
+        <div class="col text-center">
+            <a class="btn btn-primary" href="{% url 'login' %}" role="button">Login here!</a>
+            <a class="btn btn-primary" href="{% url 'signup' %}" role="button">Signup here!</a>
+        </div>
+    </div>
 </div>
 
 <!--------------------------------------------------------------------------------------------- Signup-CTA-Section: -->
@@ -80,7 +86,12 @@
         </div>
         <div class="row">
             <div class="col">
-                <a class="btn btn-primary mb-5" href="#" role="button">Signup! It's free!</a>
+                <a class="btn btn-primary mb-5" href="{% url 'signup' %}" role="button">Signup! It's free!</a>
+            </div>
+        </div>
+    </div>
+</section>
+
             </div>
         </div>
     </div>
