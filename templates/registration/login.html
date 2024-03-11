@@ -3,15 +3,20 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
+<!--User-Login Section:-->
 <section class="form-section">
+
+  <!--Success Message if User signs up successfully before getting redirected to this page:-->
   {% if messages %}
-    {% for message in messages %}
-      <div class="alert alert-success alert-dismissible fade show" role="alert">
-        {{ message }}
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>
-    {% endfor %}
+  {% for message in messages %}
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    {{ message }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  {% endfor %}
   {% endif %}
+
+  <!--Login Form-->
   <div class="container w-75 form-container">
     <h2 class="form-heading mb-5">Login</h2>
     <form method="post">

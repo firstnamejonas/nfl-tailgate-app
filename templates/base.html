@@ -19,6 +19,7 @@
 <body>
   <!------------------------------------------------------------------------------------- Header: -->
 
+  <!-- authenticated User Header -->
   {% if user.is_authenticated %}
   <nav class="navbar navbar-dark bg-dark fixed-top">
     <div class="container">
@@ -57,6 +58,7 @@
     </div>
   </nav>
   {% else %}
+  <!-- Not authenticated User Header -->
   <nav class="navbar navbar-dark bg-dark fixed-top">
     <div class="container">
       <a class="navbar-brand" href="{% url 'home' %}">

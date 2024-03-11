@@ -4,39 +4,46 @@
 {% block title %}All Chatrooms{% endblock %}
 
 {% block content %}
+<!--All Chatrooms Overview Section:-->
 <section class="general-section">
+
+    <!--Chatrooms Category Heading-->
     {% for category in categories %}
-        <h2 class="category-heading">{{ category }}</h2>
-            {% for room in rooms %}
-                {% if room.category == category %}
-                    <div class="container text-center chatrooms-container">
-                        {% if room.team %}
-                            <div class="row chatrooms">
-                                <div class="col-2">
-                                    <img src="{{ room.team.logo.url }}" alt="{{ room.team.name }}" style="max-width: 30px;">
-                                </div>
-                                <div class="col-5">
-                                    <p class="text-start chatroom-name">{{ room.name }}</p>
-                                </div>
-                                <div class="col-5 text-end">
-                                    <a class="btn btn-primary btn-sm" href="{% url 'chat:chat_room' room_slug=room.slug %}" role="button">Open Chat</a>
-                                </div>
-                            </div>
-                        {% else %}
-                            <div class="row chatrooms">
-                                <div class="col-2">
-                                </div>
-                                <div class="col-5">
-                                    <p class="text-start chatroom-name">{{ room.name }}</p>
-                                </div>
-                                <div class="col-5 text-end">
-                                    <a class="btn btn-primary btn-sm" href="{% url 'chat:chat_room' room_slug=room.slug %}" role="button">Open Chat</a>
-                                </div>
-                            </div>
-                        {% endif %}
-                    </div>
-                {% endif %}
-            {% endfor %}
+    <h2 class="category-heading">{{ category }}</h2>
+    {% for room in rooms %}
+    {% if room.category == category %}
+    <div class="container text-center chatrooms-container">
+        <!--If Chatroom is a Team, then this will appear:-->
+        {% if room.team %}
+        <div class="row chatrooms">
+            <div class="col-2">
+                <img src="{{ room.team.logo.url }}" alt="{{ room.team.name }}" style="max-width: 30px;">
+            </div>
+            <div class="col-5">
+                <p class="text-start chatroom-name">{{ room.name }}</p>
+            </div>
+            <div class="col-5 text-end">
+                <a class="btn btn-primary btn-sm" href="{% url 'chat:chat_room' room_slug=room.slug %}"
+                    role="button">Open Chat</a>
+            </div>
+        </div>
+        {% else %}
+        <!--If Chatroom is not a Team, then this will appear:-->
+        <div class="row chatrooms">
+            <div class="col-2">
+            </div>
+            <div class="col-5">
+                <p class="text-start chatroom-name">{{ room.name }}</p>
+            </div>
+            <div class="col-5 text-end">
+                <a class="btn btn-primary btn-sm" href="{% url 'chat:chat_room' room_slug=room.slug %}"
+                    role="button">Open Chat</a>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+    {% endif %}
+    {% endfor %}
     {% endfor %}
 
 </section>
