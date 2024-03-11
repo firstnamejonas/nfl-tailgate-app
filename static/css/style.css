@@ -48,6 +48,14 @@ body {
     max-width: 350px;
 }
 
+.social-icons {
+    font-size: 30px;
+}
+
+.social-icons:hover {
+    color: #212529;
+}
+
 /*------------------------------------------------------------------------------- Signup-Steps-Section (Home): */
 
 #how-to-sign-up {
@@ -62,6 +70,12 @@ body {
 
 .card-styling {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*------------------------------------------------------------------------------- Socials-Section (Home): */
+
+#socials-section {
+    margin: 0 auto 50px;
 }
 
 /*------------------------------------------------------------------------------- Footer (Home): */
