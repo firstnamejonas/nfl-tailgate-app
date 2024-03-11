@@ -22,7 +22,7 @@
   {% if user.is_authenticated %}
   <nav class="navbar navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="{% url 'chatrooms' %}">
         <img id="logo" src="{% static 'images/nfl_logo.png' %}" alt="">
         tailgate<span class="text-highlights">.</span>
       </a>
@@ -59,8 +59,10 @@
   {% else %}
   <nav class="navbar navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#"><img id="logo" src="{% static 'images/nfl_logo.png' %}" alt="">tailgate<span
-          class="text-highlights">.</span></a>
+      <a class="navbar-brand" href="{% url 'home' %}">
+        <img id="logo" src="{% static 'images/nfl_logo.png' %}" alt="">
+        tailgate<span class="text-highlights">.</span>
+      </a>
       <button class="navbar-toggler shadow-none border-primary" type="button" data-bs-toggle="offcanvas"
         data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
