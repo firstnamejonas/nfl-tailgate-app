@@ -193,6 +193,11 @@ textarea {
     color: #212529;
 }
 
+.chat-profilepics {
+    max-width: 30px;
+    border-radius: 50%;
+}
+
 /*------------------------------------------------------------------------------- Edit Message Page: */
 
 .text-edit-message {
