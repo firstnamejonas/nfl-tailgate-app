@@ -29,6 +29,11 @@
             {% for message in messages %}
             <div class="col-12">
                 <p class="message">
+                    {% with sender_profile=message.sender.profile %}
+                    <img class="chat-profilepics" 
+                    src="{{ sender_profile.picture.url }}" 
+                    alt="{{ sender_profile.user.username }} Profile Picture">
+                    {% endwith %}
                     {{ message.sender.username }}:
                     <br>
                     {{ message.content }}
