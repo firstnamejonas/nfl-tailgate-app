@@ -1,7 +1,9 @@
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 from .models import Room
 from userprofile.models import Profile
 
+@login_required
 def room_list(request):
     """
     Summary:
