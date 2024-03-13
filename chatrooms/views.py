@@ -13,7 +13,17 @@ def room_list(request):
     Returns:
     HttpResponse: The HTTP response object containing the rendered room list page.
     """
-    rooms = Room.objects.all()
-    categories = set(room.category for room in rooms)
     profile = Profile.objects.get(user=request.user)
-    return render(request, 'chatrooms.html', {'rooms': rooms, 'categories': categories, 'profile': profile})
+    favorite_team = profile.favorite_team
+    rooms = Room.objects.all()
+
+    favorite_room = None
+    other_rooms = []
+    for room in rooms:
+        if room.team == favorite_team:
+            favorite_room = room		        
+        else:
+            other_rooms.append(room)
+
+    categories = set(room.category for room in other_rooms)
+    return render(request, 'chatrooms.html', {'favorite_room': favorite_room, 'other_rooms': other_rooms, 'categories': categories, 'profile': profile})
