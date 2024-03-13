@@ -33,7 +33,7 @@ ALLOWED_HOSTS = ['8000-firstnamejo-nfltailgate-ps8ft99hpoa.ws-eu110.gitpod.io', 
 
 # Add CSRF_TRUSTED_ORIGINS here
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-firstnamejo-nfltailgate-ps8ft99hpoa.ws-eu108.gitpod.io',
+    'https://8000-firstnamejo-nfltailgate-ps8ft99hpoa.ws-eu110.gitpod.io',
     'https://.herokuapp.com',
 ]
 
