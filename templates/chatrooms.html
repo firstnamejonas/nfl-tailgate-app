@@ -7,10 +7,30 @@
 <!--All Chatrooms Overview Section:-->
 <section class="general-section">
 
+    <!--Favorite User Team Chat:-->
+    {% if favorite_room %}
+    <h2 class="category-heading">Your favorite Team:</h2>
+    <div class="container text-center chatrooms-container">
+        <div class="row chatrooms">
+            <div class="col-2">
+                <img src="{{ favorite_room.team.logo.url }}" alt="{{ favorite_room.team.name }}"
+                    style="max-width: 30px;">
+            </div>
+            <div class="col-5">
+                <p class="text-start chatroom-name">{{ favorite_room.name }}</p>
+            </div>
+            <div class="col-5 text-end">
+                <a class="btn btn-primary btn-sm" href="{% url 'chat:chat_room' room_slug=favorite_room.slug %}"
+                    role="button">Open Chat</a>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
     <!--Chatrooms Category Heading-->
     {% for category in categories %}
     <h2 class="category-heading">{{ category }}</h2>
-    {% for room in rooms %}
+    {% for room in other_rooms %}
     {% if room.category == category %}
     <div class="container text-center chatrooms-container">
         <!--If Chatroom is a Team, then this will appear:-->
