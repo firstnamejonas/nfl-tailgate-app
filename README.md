@@ -67,5 +67,46 @@
 | --- | --- | --- | --- | --- | --- |
 | ![screenshot](documentation/wireframes/desktop-home.png) | ![screenshot](documentation/wireframes/desktop-signup.png) | ![screenshot](documentation/wireframes/desktop-login.png) | ![screenshot](documentation/wireframes/desktop-chatrooms.png) | ![screenshot](documentation/wireframes/desktop-chat.png) | ![screenshot](documentation/wireframes/desktop-userprofile.png) |
 
+
+## Features
+
+### Existing Features
+
+| Page | Feature-Title | Feature-Description | Screenshot |
+| --- | --- | --- | --- |
+| **All Pages** |  |  |  |
+|  | Header | The header contains the app logo, which also acts as a link back to the home page. For logged-in users, the logo link leads back to all chats; for users who are not logged in, it leads back to the homepage. There is a navbar menu which contains a link to the homepage, signup page and login page for users who are not logged in. For logged in users the menu includes a link to all chatrooms, user profiles and a logout button. The user will also be labeled with their username at the top of the menu. | --- |
+| **Home** |  |  |  |
+|  | Hero-Section | The Hero Section briefly and concisely describes what the tailgate app is all about. A mockup of the app is also shown. There are two links to the login page and the singup page for simple user navigation. |  |
+|  | Sign-Up CTA | In this section the signup process is shown, this section serves as a CTA to acquire new users, therefore there is also a link to the signup page in the section. |  |
+|  | Socials | In this section, the user will find links to the social media channels that are displayed with [Font Awesome](https://fontawesome.com) icons. |  |
+| **Signup** |  |  |  |
+|  | Signup-Form | This form allows new users to register quickly and easily. Instructions are also provided to facilitate the registration process. If the user already has an account, he can click on the link below to go directly to the login. |  |
+| **Login** |  |  |  |
+|  | Login-Form | This form allows users to log in quickly and easily. If the user does not yet have an account, he can click on the link below to go directly to the signup. |  |
+| **All Chatrooms Overview / Main Page for logged in Users** |  |  |  |
+|  | Chatrooms-Overview | This feature displays all existing chat rooms to the user. The chat rooms are sorted by category. The chat room of the favorite user team is always at the top, if the user has not yet selected a team, he will receive a message to do so in order to see the chat at the top. Each chatroom is displayed with its name, and if the chatroom is a team chatroom, the logo is also displayed. On the right side of each chatroom field is an obvious link labeled "open chat" for easy user navigation. |  |
+| **Chatroom Pages** |  |  |  |
+|  | Chatroom-Info | In the upper area of the chat section, the user can see which chatroom he is currently in (chatroom name is displayed). |  |
+|  | Leave-Chatroom-Button | To ensure easy user navigation, each chat room has a link button at the top right of the chat section so that the user knows immediately how to leave the chat room. |  |
+|  | Chatroom-Refresh | Since the live chat feature is a future feature, the user can simply click on the "Refresh" button to refresh the chat room the user is in to see the latest messages. |  |
+|  | Chatroom-Messages | The chatroom messages are displayed in a scroll field so that the page does not become infinitely long. Each message is equipped with the profile picture of the user, the user name, the message and when this message was written. |  |
+|  | Chatroom-CRUD | Each user can write a message via the textarea field in the lower part of the chat section and share the message in the respective chatroom via the "Send" button (CREATE). The message is then shared in the chatroom and can be read by all users (READ). If the user wants to edit the message, he can click on the edit icon in his messages and a new page will open where the user can edit the message (UPDATE). If the user wants to delete the message, he can do so by clicking on the delete icon, then he will be redirected to a new page where he can delete the message, just like in the update section (DELETE). |  |
+| **Update Message Page** |  |  |  |
+|  | Update User Message | Users can access this feature by clicking on the edit icon in their own messages. On this page, the user can quickly and easily edit their message in the text field and confirm the changes with "Save Changes" or return to the chatroom without changes with "Go back". |  |
+| **Delete Message Page** |  |  |  |
+|  | Delete User Message | Users can access this feature by clicking on the delete icon in their own messages. On this page, the user can see his message that he's about to delete and confirm the process with "Delete" or return to the chatroom without deleting a message with "Go back". |  |
+| **Userprofile Page** |  |  |  |
+|  | CRUD Profile Picture | The user always has a default profile picture. He can upload a new one and uploads it by clicking on the "Change Picture" button. He can edit it again and again by selecting a new file and clicking the "Change Picture" button again. He can also delete it by selecting the checkbox field "Clean" and then clicking on the "Change Picture" button, then the default picture will be displayed again. |  |
+|  | View profile information | With this feature, the user can view his profile information, including the profile picture, the user name and the favorite NFL team selected by him. |  |
+|  | Select favorite NFL Team | If the user has not yet selected a favorite team, he can select his favorite NFL team here once. Once selected, it can no longer be changed with the profile. |  |
+
+### Future Features
+
+| Feature-Title | Feature-Description |
+| --- | --- |
+| EXAMPLE | TEXT |
+
+
 | --- | --- | --- |
 | --- | --- | --- |
