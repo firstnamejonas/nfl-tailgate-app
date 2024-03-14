@@ -126,5 +126,45 @@
 - [![Balsamiq](https://img.shields.io/badge/Balsamiq-grey?logo=barmenia&logoColor=CE0908)](https://balsamiq.com/wireframes) used for creating wireframes.
 
 
+## Database Design
+
+❗️❗️❗️❗️❗️❗️❗️❗️❗️❗️❗️❗️❗️❗️❗️❗️❗️❗️❗️❗️❗️❗️
+
+
+## Agile Development Process
+
+### GitHub Projects
+
+[GitHub Projects](https://github.com/firstnamejonas/nfl-tailgate-app/projects) served as an Agile tool for this project.
+It isn't a specialized tool, but with the right tags and project creation/issue assignments, it can be made to work.
+
+Through it, user stories, issues, and milestone tasks were planned, then tracked on a weekly basis using the basic Kanban board.
+
+### GitHub Issues
+
+[GitHub Issues](https://github.com/firstnamejonas/nfl-tailgate-app/issues) served as an another Agile tool.
+There, I used my own **User Story Template** to manage user stories.
+
+It also helped with milestone iterations on a weekly basis.
+
+- [Open Issues](https://github.com/firstnamejonas/nfl-tailgate-app/issues) [![GitHub issues](https://img.shields.io/github/issues/firstnamejonas/nfl-tailgate-app)](https://github.com/firstnamejonas/nfl-tailgate-app/issues)
+
+    ![screenshot](documentation/gh-issues-open.png)
+
+- [Closed Issues](https://github.com/firstnamejonas/nfl-tailgate-app/issues?q=is%3Aissue+is%3Aclosed) [![GitHub closed issues](https://img.shields.io/github/issues-closed/firstnamejonas/nfl-tailgate-app)](https://github.com/firstnamejonas/nfl-tailgate-app/issues?q=is%3Aissue+is%3Aclosed)
+
+    ![screenshot](documentation/gh-issues-closed.png)
+
+### MoSCoW Prioritization
+
+I've decomposed my Epics into stories prior to prioritizing and implementing them.
+Using this approach, I was able to apply the MoSCow prioritization and labels to my user stories within the Issues tab.
+
+- **Must Have**: guaranteed to be delivered (*max 60% of stories*)
+- **Should Have**: adds significant value, but not vital (*the rest ~20% of stories*)
+- **Could Have**: has small impact if left out (*20% of stories*)
+- **Won't Have**: not a priority for this iteration
+
+
 | --- | --- | --- |
 | --- | --- | --- |
