@@ -332,5 +332,19 @@ You can fork this repository by using the following steps:
 There were no differences found.
 
 
+## Credits
+
+### Content
+| Source | Location | Notes |
 | --- | --- | --- |
-| --- | --- | --- |
+| [Markdown Builder](https://tim.2bn.dev/markdown-builder) | README and TESTING | tool to help generate the Markdown files |
+
+### Media
+| Source | Location | Type | Notes |
+| --- | --- | --- | --- |
+| [Pexels](https://www.pexels.com) | entire site | image | favicon on all pages |
+
+### Acknowledgements
+- I would like to thank my family & my partner Caro, for believing in me, and allowing me to make this transition into software development.
+- I would like to thank my Code Institute mentor, [Tim Nelson](https://github.com/TravelTimN) for his support throughout the development of this project.
+- I would like to thank the [Code Institute Slack community](https://code-institute-room.slack.com) for the moral support; it kept me going during periods of self doubt and imposter syndrome.
