@@ -84,3 +84,18 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 | Mobile (DevTools) | ![screenshot](documentation/responsivness/responsive-mobile-home.png) | ![screenshot](documentation/responsivness/responsive-mobile-signup.png) | ![screenshot](documentation/responsivness/responsive-mobile-login.png) | ![screenshot](documentation/responsivness/responsive-mobile-chatrooms.png) | ![screenshot](documentation/responsivness/responsive-mobile-chat.png) | ![screenshot](documentation/responsivness/responsive-mobile-userprofile.png) | ![screenshot](documentation/responsivness/responsive-mobile-delete.png) | ![screenshot](documentation/responsivness/responsive-mobile-edit.png) | Works as expected! |
 | Tablet (DevTools) | ![screenshot](documentation/responsivness/responsive-tablet-home.png) | ![screenshot](documentation/responsivness/responsive-tablet-signup.png) | ![screenshot](documentation/responsivness/responsive-tablet-login.png) | ![screenshot](documentation/responsivness/responsive-tablet-chatrooms.png) | ![screenshot](documentation/responsivness/responsive-tablet-chat.png) | ![screenshot](documentation/responsivness/responsive-tablet-userprofile.png) | ![screenshot](documentation/responsivness/responsive-tablet-delete.png) | ![screenshot](documentation/responsivness/responsive-tablet-edit.png) | Works as expected! |
 | Desktop | ![screenshot](documentation/responsivness/responsive-desktop-home.png) | ![screenshot](documentation/responsivness/responsive-desktop-signup.png) | ![screenshot](documentation/responsivness/responsive-desktop-login.png) | ![screenshot](documentation/responsivness/responsive-desktop-chatrooms.png) | ![screenshot](documentation/responsivness/responsive-desktop-chat.png) | ![screenshot](documentation/responsivness/responsive-desktop-userprofile.png) | ![screenshot](documentation/responsivness/responsive-desktop-delete.png) | ![screenshot](documentation/responsivness/responsive-desktop-edit.png) | Works as expected! |
+
+## Lighthouse Audit
+
+I've tested my deployed project using the Lighthouse Audit tool to check for any major issues.
+
+| Page | Mobile | Desktop | Notes |
+| --- | --- | --- | --- |
+| Home | ![screenshot](documentation/lighthouse/lighthouse-home-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-home-desktop.png) | Some minor warnings |
+| Signup | ![screenshot](documentation/lighthouse/lighthouse-signup-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-signup-desktop.png) | Some minor warnings |
+| Login | ![screenshot](documentation/lighthouse/lighthouse-login-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-login-desktop.png) | Some minor warnings |
+| Chatrooms Overview | ![screenshot](documentation/lighthouse/lighthouse-chatrooms-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-chatrooms-desktop.png) | Low "Best Practice" Score due to cloudinary. |
+| Chat | ![screenshot](documentation/lighthouse/lighthouse-chat-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-chat-desktop.png) | Some minor warnings |
+| Edit User Message | ![screenshot](documentation/lighthouse/lighthouse-edit-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-edit-desktop.png) | Some minor warnings |
+| Delete User Message | ![screenshot](documentation/lighthouse/lighthouse-delete-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-delete-desktop.png) | Some minor warnings |
+| User Profile | ![screenshot](documentation/lighthouse/lighthouse-userprofile-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-userprofile-desktop.png) | Low "Best Practice" Score due to cloudinary. |
