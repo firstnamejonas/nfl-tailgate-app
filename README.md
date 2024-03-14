@@ -166,5 +166,10 @@ Using this approach, I was able to apply the MoSCow prioritization and labels to
 - **Won't Have**: not a priority for this iteration
 
 
+## Testing
+> [!NOTE]  
+> For all testing, please refer to the [TESTING.md](TESTING.md) file.
+
+
 | --- | --- | --- |
 | --- | --- | --- |
