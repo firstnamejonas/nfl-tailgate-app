@@ -10,7 +10,7 @@ class Message(models.Model):
 
     Attributes:
     room (Room):
-    Foreign key to the Room model, 
+    Foreign key to the Room model,
     indicating the room to which the message belongs.
     sender (User):
     Foreign key to the User model, indicating the sender of the message.
