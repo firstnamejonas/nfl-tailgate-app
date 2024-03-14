@@ -338,6 +338,12 @@ There were no differences found.
 | Source | Location | Notes |
 | --- | --- | --- |
 | [Markdown Builder](https://tim.2bn.dev/markdown-builder) | README and TESTING | tool to help generate the Markdown files |
+| [LearnDjango](https://learndjango.com/tutorials/django-login-and-logout-tutorial#create-a-homepage) | Login / Signup / Logout | Support to setup the User Login, Signup & Logout |
+| [Tech With Tim](https://www.youtube.com/watch?v=WuyKxdLcw3w) | Login / Signup | Support to style the User Login & Signup Forms |
+| [Sharma Coder](https://www.youtube.com/watch?v=8kBo91L8JTY) | Success Message after User Signup on Login-Page | Support to setup flash message in django |
+| [CodeInstitute](https://learn.codeinstitute.net/dashboard) | Chatrooms | Support to setup Rooms & Chat Functions |
+| [Traversy Media](https://www.youtube.com/watch?v=PtQiiknWUcI&t=21842s) | Edit / Delete Chat Messages | Support to setup feature to edit and / or delete chat messages |
+
 
 ### Media
 | Source | Location | Type | Notes |
