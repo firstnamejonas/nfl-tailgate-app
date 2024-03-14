@@ -51,6 +51,21 @@
 
 ### Mobile Wireframes
 
-| Example | Example | Example |
+| Home | Signup | Login | All Chatrooms Overview | Chatroom | Userprofile |
+| --- | --- | --- | --- | --- | --- |
+| ![screenshot](documentation/wireframes/smartphone-home.png) | ![screenshot](documentation/wireframes/smartphone-signup.png) | ![screenshot](documentation/wireframes/smartphone-login.png) | ![screenshot](documentation/wireframes/smartphone-chatrooms.png) | ![screenshot](documentation/wireframes/smartphone-chat.png) | ![screenshot](documentation/wireframes/smartphone-userprofile.png) |
+
+### Tablet Wireframes
+
+| Home | Signup | Login | All Chatrooms Overview | Chatroom | Userprofile |
+| --- | --- | --- | --- | --- | --- |
+| ![screenshot](documentation/wireframes/tablet-home.png) | ![screenshot](documentation/wireframes/tablet-signup.png) | ![screenshot](documentation/wireframes/tablet-login.png) | ![screenshot](documentation/wireframes/tablet-chatrooms.png) | ![screenshot](documentation/wireframes/tablet-chat.png) | ![screenshot](documentation/wireframes/tablet-userprofile.png) |
+
+### Desktop Wireframes
+
+| Home | Signup | Login | All Chatrooms Overview | Chatroom | Userprofile |
+| --- | --- | --- | --- | --- | --- |
+| ![screenshot](documentation/wireframes/desktop-home.png) | ![screenshot](documentation/wireframes/desktop-signup.png) | ![screenshot](documentation/wireframes/desktop-login.png) | ![screenshot](documentation/wireframes/desktop-chatrooms.png) | ![screenshot](documentation/wireframes/desktop-chat.png) | ![screenshot](documentation/wireframes/desktop-userprofile.png) |
+
 | --- | --- | --- |
 | --- | --- | --- |
