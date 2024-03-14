@@ -17,7 +17,7 @@ class SignUpView(generic.CreateView):
     template_name (str): Template file for rendering the sign-up page.
 
     Methods:
-    form_valid (HttpResponse): Handles valid form submission, 
+    form_valid (HttpResponse): Handles valid form submission,
     displays success message and redirects user.
 
     """
@@ -31,6 +31,5 @@ class SignUpView(generic.CreateView):
         after successfull user signup!
         """
         response = super().form_valid(form)
-        messages.success(self.request, 
-        'Your account has been created successfully. Please login.')
+        messages.success(self.request, 'Your account has been created successfully. Please login.')
         return response
