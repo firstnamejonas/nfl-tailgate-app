@@ -9,7 +9,7 @@ body {
     color: #0C6DFD;
 }
 
-#logo {
+.logo {
     max-width: 30px;
     margin-right: 10px;
 }
