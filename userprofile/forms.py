@@ -2,6 +2,7 @@ from django import forms
 from .models import Profile
 from chatrooms.models import Team
 
+
 class ProfilePictureForm(forms.ModelForm):
     """
     Summary:
@@ -10,6 +11,7 @@ class ProfilePictureForm(forms.ModelForm):
     class Meta:
         model = Profile
         fields = ['picture']
+
 
 class FavoriteTeamForm(forms.ModelForm):
     """

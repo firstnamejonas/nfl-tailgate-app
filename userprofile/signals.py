@@ -5,8 +5,10 @@ from .models import Profile
 
 """
 Summary:
-Signal handlers for creating and saving profile when a new user is created or an existing user is updated.
+Signal handlers for creating and saving profile
+when a new user is created or an existing user is updated.
 """
+
 
 @receiver(post_save, sender=User)
 def create_profile(sender, instance, created, **kwargs):
