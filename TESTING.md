@@ -160,3 +160,17 @@ Defensive programming was manually tested with the below user acceptance testing
 | As a user who sent a message, I can edit or delete my own messages so that I can correct mistakes or remove outdated information. | ![screenshot](documentation/features/feature-edit.png) ![screenshot](documentation/features/feature-delete.png) |
 | As a logged in user, I can update my profile picture so that I can personalize my account. | ![screenshot](documentation/features/feature-userprofile.png) |
 | As a logged in user I can click on a button or link so that I am able to log out of my account. | ![screenshot](documentation/features/feature-logout.png) |
+
+## Bugs
+
+| Bug | Screenshots | Solution | Screenshot |
+| --- | --- | --- | --- |
+| When attempting to change the profile picture in the app by clicking 'Change Picture', the favorite team field is also consistently reset | ![screenshot](documentation/bugs/bug-01.png) ![screenshot](documentation/bugs/bug-01-2.png) | To fix this, I separated the profile form into two forms — one for the picture and one for the team. | ![screenshot](documentation/bugs/bug-solution-01.png) |
+| When signing up for a useraccount there was no profile connected with the new user. | --- | To automate it & fix bugs that result out of it, I added two functions to the signals.py file to automate profile-user connection. | ![screenshot](documentation/bugs/bug-solution-02.png) |
+| If the User hasn't choose his favorite Team to get the Chat displayed first, he should receive a flash message, that he should set it up and no favorite chat should be displayed. Instead the favorite Chat displayed is just a non team chat, which has the same value as a userprofile that is yet to choose a favorite team. | ![screenshot](documentation/bugs/bug-03.png) | To fix this, I _____________. |  |
+| Reverse for 'chat_room' with keyword arguments '{'room_slug': "Y' not found. | ![screenshot](documentation/bugs/bug-04.png) | To fix this, I connected the User Profile with the Rooms over the Team value they have in common, therefore I can use the link of the room, which has a link. | ![screenshot](documentation/bugs/bug-solution-04.png) |
+
+## Unfixed Bugs
+
+> [!NOTE]  
+> There are no remaining bugs that I am aware of.
