@@ -32,15 +32,16 @@
 
 ### Site Users
 - As a new site user, I can visit a home page so that I can get more information on what's NFL Tailgate App is all bout and how to sign up.
-- As a new user, I can register with my username, an email, set a password and confirm it so that I can access the Tailgate app features.
+- As a new user, I can register with my username, set a password and confirm it so that I can access the Tailgate app features.
 - As a registered user, I can log in with my username and password so that I can access my account and participate in chats.
-- As a new signed up user I can choose my favorite team so that I can participate in the chat room of my favorite team.
-- As a logged in user I can got to the main user page where i can find and overview all chats on the app so that can join different chat rooms.
+- As a new signed up user I can choose my favorite team so that I get a favorite chatroom prioritisation.
+- As a logged in user I can got to the main user page where i can find and overview all chats on the app so that I can join different chat rooms.
 - As a user who joined a chatroom, I can overview a chat interface, so that I can read messages, send messages and go back to all chatsforums.
-- As a user in a chatroom, I can send messages in all chat rooms, once entered, except in those chatrooms that are from other teams that are not my favorite team so that I can communicate with other users.
+- As a user in a chatroom, I can send messages in all chat rooms, once entered, so that I can communicate with other users.
 - As a user who sent a message, I can edit or delete my own messages so that I can correct mistakes or remove outdated information.
+- As a logged in user I can navigate to a userprofile page of my account so that I can overview my profile information, like username, favorite team and profile picture.
 - As a logged in user, I can update my profile picture so that I can personalize my account.
-- As a logged in user I can click on a button or link so that I am able to log out of my account.
+- As a logged in user I can click on a button so that I am able to log out of my account.
 
 ### Site Admin
 - As a site administrator, I can create new chatrooms, categorize them, and manage existing chatrooms so that I can ensure a well-organized and engaging environment for users.
