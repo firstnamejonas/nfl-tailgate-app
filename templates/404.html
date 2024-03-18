@@ -10,13 +10,13 @@
         <div class="row">
             <div class="col-12 mt-5">
                 <h1>404 Error!</h1>
-                <h2>
+                <p>
                     Looks like the quarterback threw an interception, because this page is nowhere to be found!
-                </h2>
+                </p>
                 {% if user.is_authenticated %}
-                <a class="btn btn-danger" href="{% url 'chatrooms' %}">Click to find your way back!</a>
+                <a class="btn btn-danger mb-5" href="{% url 'chatrooms' %}">Click to find your way back!</a>
                 {% else %}
-                <a class="btn btn-danger" href="{% url 'home' %}">Click to find your way back!</a>
+                <a class="btn btn-danger mb-5" href="{% url 'home' %}">Click to find your way back!</a>
                 {% endif %}
             </div>
         </div>
