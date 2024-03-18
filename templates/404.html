@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Edit Message{% endblock %}
+
+{% block content %}
+<!--Error Message Section:-->
+<section class="general-section">
+    <div class="container container-background text-center">
+        <div class="row">
+            <div class="col-12 mt-5">
+                <h1 class="error-page-text">404 Error!</h1>
+                <h2 class="error-page-text">
+                    Looks like the quarterback threw an interception, because this page is nowhere to be found!
+                </h2>
+                {% if user.is_authenticated %}
+                <a class="btn btn-danger" href="{% url 'chatrooms' %}"></a>
+                {% else %}
+                <a class="btn btn-danger" href="{% url 'home' %}"></a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
