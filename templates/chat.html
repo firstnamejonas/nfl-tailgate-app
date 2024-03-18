@@ -26,7 +26,7 @@
 
         <!--Chatroom-Messages-->
         <div class="row mt-5 scroll">
-            {% for message in messages %}
+            {% for message in chat_messages %}
             <div class="col-12">
                 <p class="message">
                     {% with sender_profile=message.sender.profile %}
@@ -61,7 +61,7 @@
                 <small>Please note that you have to refresh the page to see all new messages!</small>
             </div>
             <div class="col-12 text-center">
-                <button id="refresh-button" class="btn btn-primary btn-sm">Refresh</button>
+                <button id="refresh-button" class="btn btn-primary btn-sm" onclick="location.reload();">Refresh</button>
             </div>
         </div>
 
