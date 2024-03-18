@@ -9,14 +9,14 @@
     <div class="container container-background text-center">
         <div class="row">
             <div class="col-12 mt-5">
-                <h1 class="error-page-text">404 Error!</h1>
-                <h2 class="error-page-text">
+                <h1>404 Error!</h1>
+                <h2>
                     Looks like the quarterback threw an interception, because this page is nowhere to be found!
                 </h2>
                 {% if user.is_authenticated %}
-                <a class="btn btn-danger" href="{% url 'chatrooms' %}"></a>
+                <a class="btn btn-danger" href="{% url 'chatrooms' %}">Click to find your way back!</a>
                 {% else %}
-                <a class="btn btn-danger" href="{% url 'home' %}"></a>
+                <a class="btn btn-danger" href="{% url 'home' %}">Click to find your way back!</a>
                 {% endif %}
             </div>
         </div>
