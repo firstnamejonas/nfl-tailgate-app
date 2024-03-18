@@ -19,7 +19,7 @@ def chat_room(request, room_slug):
     The HTTP response object containing the rendered chat room page.
     """
     room = get_object_or_404(Room, slug=room_slug)
-    messages = Message.objects.filter(room=room).order_by('-timestamp')
+    chat_messages = Message.objects.filter(room=room).order_by('-timestamp')
 
     if request.method == 'POST':
         content = request.POST.get('content')
@@ -28,11 +28,11 @@ def chat_room(request, room_slug):
                                    content=content)
             return redirect('chat:chat_room', room_slug=room_slug)
 
-    for message in messages:
+    for message in chat_messages:
         message.editable = message.can_edit(request.user)
         message.deletable = message.can_delete(request.user)
 
-    return render(request, 'chat.html', {'room': room, 'messages': messages})
+    return render(request, 'chat.html', {'room': room, 'chat_messages': chat_messages})
 
 
 @login_required
