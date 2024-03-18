@@ -13,6 +13,8 @@
 
 [Click here](https://nfl-tailgate-app-1dcb67dfd98a.herokuapp.com) to experience the "tailgate." App!
 
+![screenshot](documentation/mockup-tailgate-app.png)
+
 
 ## UX
 
