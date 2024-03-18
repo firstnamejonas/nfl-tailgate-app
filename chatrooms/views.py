@@ -23,7 +23,6 @@ def room_list(request):
         favorite_team = profile.favorite_team
     else:
         favorite_team = None
-        messages.error(request, 'Choose a team!')
 
     rooms = Room.objects.all()
 
