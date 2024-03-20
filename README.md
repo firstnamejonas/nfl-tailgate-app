@@ -344,7 +344,8 @@ There were no differences found.
 ### Media
 | Source | Location | Type | Notes |
 | --- | --- | --- | --- |
-| [Pexels](https://www.pexels.com) | entire site | image | favicon on all pages |
+| [Canva](https://www.canva.com/) | Homepage | Images | App Mockup images, SignUp Steps Images |
+| [ESPN](https://www.espn.com/nfl/teams) | Homepage, Chatrooms Overview Page, Chatroom Pages, Userprofile | Images | Logo Images for Teams and NFL Logo |
 
 ### Acknowledgements
 - I would like to thank my family & my partner Caro, for believing in me, and allowing me to make this transition into software development.
