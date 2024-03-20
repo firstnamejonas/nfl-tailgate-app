@@ -4,9 +4,6 @@
 [![GitHub last commit](https://img.shields.io/github/last-commit/firstnamejonas/nfl-tailgate-app)](https://github.com/firstnamejonas/nfl-tailgate-app/commits/main)
 [![GitHub repo size](https://img.shields.io/github/repo-size/firstnamejonas/nfl-tailgate-app)](https://github.com/firstnamejonas/nfl-tailgate-app)
 
----
-
-
 ## About
 
 "tailgate." is a virtual fan experience for NFL fans. We all know it, the famous tailgating in front of the NFL teams' stadiums on game days. Fans meet, spend time together and talk about the teams, the game and much more. But obviously not every fan makes it to the stadium and that's why we built "tailgate." for these fans, so that fans who can't make it to the stadium can still interact with other fans online and be part of the community even if they are sitting alone in their living room.
@@ -130,8 +127,28 @@
 
 ## Database Design
 
-❗️❗️❗️❗️❗️❗️❗️❗️❗️❗️❗️❗️❗️❗️❗️❗️❗️❗️❗️❗️❗️❗️
+I have used `pygraphviz` and `django-extensions` to auto-generate an ERD.
 
+The steps taken were as follows:
+- In the terminal: `sudo apt update`
+- then: `sudo apt-get install python3-dev graphviz libgraphviz-dev pkg-config`
+- then type `Y` to proceed
+- then: `pip3 install django-extensions pygraphviz`
+- in my `settings.py` file, I added the following to my `INSTALLED_APPS`:
+```python
+INSTALLED_APPS = [
+    ...
+    'django_extensions',
+    ...
+]
+```
+- back in the terminal: `python3 manage.py graph_models -a -o erd.png`
+- dragged the new `erd.png` file into my `documentation/` folder
+- removed `'django_extensions',` from my `INSTALLED_APPS`
+- finally, in the terminal: `pip3 uninstall django-extensions pygraphviz -y`
+
+![erd](documentation/erd.png)
+source: [medium.com](https://medium.com/@yathomasi1/1-using-django-extensions-to-visualize-the-database-diagram-in-django-application-c5fa7e710e16)
 
 ## Agile Development Process
 
