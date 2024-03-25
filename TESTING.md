@@ -31,11 +31,8 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 
 ### JavaScript
 
-I have used the recommended [JShint Validator](https://jshint.com) to validate all of my JS files.
-
-| Directory | File | Screenshot | Notes |
-| --- | --- | --- | --- |
-| static/js | script.js | ![screenshot](documentation/testing/jshint_js_validation.png) | No errors or warnings to show. |
+> [!NOTE]  
+> There is no JavaScript in my project that requires testing.
 
 ### Python
 
