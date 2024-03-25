@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 from .models import Message
 from chatrooms.models import Room
 
@@ -26,6 +27,7 @@ def chat_room(request, room_slug):
         if content:
             Message.objects.create(room=room, sender=request.user,
                                    content=content)
+            messages.success(request, 'Your message has been added!')
             return redirect('chat:chat_room', room_slug=room_slug)
 
     for message in chat_messages:
@@ -58,6 +60,7 @@ def edit_message(request, message_id):
         if new_content:
             message.content = new_content
             message.save()
+            messages.success(request, 'Your message has been updated!')
             return redirect('chat:chat_room', room_slug=message.room.slug)
 
     return render(request, 'edit_message.html', {'message': message})
@@ -83,6 +86,7 @@ def delete_message(request, message_id):
 
     if request.method == 'POST':
         message.delete()
+        messages.success(request, 'Your message has been deleted!')
         return redirect('chat:chat_room', room_slug=message.room.slug)
 
     return render(request, 'delete_message.html', {'message': message})
