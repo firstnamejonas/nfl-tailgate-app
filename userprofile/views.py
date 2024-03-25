@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 from .forms import ProfilePictureForm, FavoriteTeamForm
 from .models import Profile
 
@@ -24,12 +25,16 @@ def user_profile(request):
                                               request.FILES, instance=profile)
             if picture_form.is_valid():
                 picture_form.save()
+                messages.success(request, 'Your picture has been updated!')
                 return redirect('userprofile')
+            messages.error(request, 'Error: Please try again!')
         elif 'save_favorite_team' in request.POST:
             team_form = FavoriteTeamForm(request.POST, instance=profile)
             if team_form.is_valid():
                 team_form.save()
+                messages.success(request, 'Favorite team has been added!')
                 return redirect('userprofile')
+            messages.error(request, 'Error: Please try again!')
     else:
         picture_form = ProfilePictureForm(instance=profile)
         team_form = FavoriteTeamForm(instance=profile)
