@@ -24,4 +24,4 @@ class FavoriteTeamForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super(FavoriteTeamForm, self).__init__(*args, **kwargs)
-        self.fields['favorite_team'].queryset = Team.objects.all()
+        self.fields['favorite_team'].queryset = Team.objects.all().order_by('name')
