@@ -100,6 +100,8 @@
 |  | CRUD Profile Picture | The user always has a default profile picture. He can upload a new one and uploads it by clicking on the "Change Picture" button. He can edit it again and again by selecting a new file and clicking the "Change Picture" button again. He can also delete it by selecting the checkbox field "Clean" and then clicking on the "Change Picture" button, then the default picture will be displayed again. | ![screenshot](documentation/features/feature-userprofile.png) |
 |  | View profile information | With this feature, the user can view his profile information, including the profile picture, the user name and the favorite NFL team selected by him. | ![screenshot](documentation/features/feature-userprofile.png) |
 |  | Select favorite NFL Team | If the user has not yet selected a favorite team, he can select his favorite NFL team here once. Once selected, it can no longer be changed with the profile. | ![screenshot](documentation/features/feature-favorite-team.png) |
+| **404 Error Page** |  |  |  |
+|  | 404 Error | If the user breaks the application for reasons I'm not aware of or they are searching for pages that don't exist, they will be redirected to the 404 Error Page. By clicking on the Button, they'll be redirected to the homepage if the they're not signed in or to the chatrooms overview page if they're signed in. | ![screenshot](documentation/features/feature-404.png) |
 
 ### Future Features
 
