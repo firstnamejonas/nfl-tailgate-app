@@ -108,6 +108,7 @@
 | Feature-Title | Feature-Description |
 | --- | --- |
 | Community-Guidelines | In order to create a peaceful and good environment, community guidelines should be created in the future that users must adhere to or their access will be revoked. |
+| Chat-Limitation | In order to create a peaceful and good environment, Users can only chat in those chatrooms that either have no team assigned or their favorite team assigned in order to prevent strong language or talking down to other fan bases (Note that this is also the reason, why users can't change their favorite team after they've chosen a team in their profile). |
 
 ## Tools & Technologies Used
 
