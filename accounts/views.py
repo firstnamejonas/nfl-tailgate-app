@@ -31,5 +31,8 @@ class SignUpView(generic.CreateView):
         after successfull user signup!
         """
         response = super().form_valid(form)
-        messages.success(self.request, 'Your account has been created successfully. Please login.')
+        messages.success(
+            self.request,
+            'Your account has been created successfully. Please login.'
+        )
         return response
