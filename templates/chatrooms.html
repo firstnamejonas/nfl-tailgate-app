@@ -45,7 +45,7 @@
     <!--Chatrooms Category Heading-->
     {% for category in categories %}
     <h2 class="category-heading">{{ category }}</h2>
-    {% for room in other_rooms %}
+    {% for room in other_rooms|dictsort:"name" %}
     {% if room.category == category %}
     <div class="container text-center chatrooms-container">
         <!--If Chatroom is a Team, then this will appear:-->
