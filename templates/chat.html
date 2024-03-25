@@ -36,7 +36,7 @@
                     {% endwith %}
                     {{ message.sender.username }}:
                     <br>
-                    {{ message.content }}
+                    {{ message.content|safe|linebreaksbr }}
                     <br>
                     <small>{{ message.timestamp }}</small>
                     <br>
