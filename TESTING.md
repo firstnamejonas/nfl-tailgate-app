@@ -167,6 +167,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | If the User hasn't choose his favorite Team to get the Chat displayed first, he should receive a flash message, that he should set it up and no favorite chat should be displayed. Instead the favorite Chat displayed is just a non team chat, which has the same value as a userprofile that is yet to choose a favorite team. | ![screenshot](documentation/bugs/bug-03.png) | To fix this, I've added an If-Statement with "is not" to my room_list function and updated the If-Statement in the HTML template chatrooms.html. | ![screenshot](documentation/bugs/bug-solution-03.png) ![screenshot](documentation/bugs/bug-solution-03-2.png) |
 | Reverse for 'chat_room' with keyword arguments '{'room_slug': "Y' not found. | ![screenshot](documentation/bugs/bug-04.png) | To fix this, I connected the User Profile with the Rooms over the Team value they have in common, therefore I can use the link of the room, which has a link. | ![screenshot](documentation/bugs/bug-solution-04.png) |
 | Messages in Chats where also shown as django alert messages | --- | To fix this, I renamed the chatroom messages variable, because messages is a django variable. | ![screenshot](documentation/bugs/bug-solution-05.png) |
+| Profile Picture is being consumed, when it doesn't fit the px size. | ![screenshot](documentation/bugs/bug-06.png) | To fix this, I've added a height and set object-fit to cover. | ![screenshot](documentation/bugs/bug-solution-06.png) |
 
 ## Unfixed Bugs
 
