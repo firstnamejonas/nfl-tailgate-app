@@ -18,7 +18,10 @@ class Profile(models.Model):
     __str__ (str): Returns a string representation of the profile.
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    picture = CloudinaryField('image', default='https://res.cloudinary.com/dgljwtt70/image/upload/v1709640781/zazmnydazkuerafegnfk.png', blank=True, null=True)
+    picture = CloudinaryField(
+        'image',
+        default='https://res.cloudinary.com/dgljwtt70/image/upload/v1709640781/zazmnydazkuerafegnfk.png',  # noqa
+        blank=True, null=True)
     favorite_team = models.ForeignKey('chatrooms.Team',
                                       on_delete=models.SET_NULL,
                                       null=True, blank=True)
