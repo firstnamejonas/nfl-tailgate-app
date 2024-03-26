@@ -31,4 +31,7 @@ class SignUpViewTestCase(TestCase):
         # Check success message
         messages = list(get_messages(response.wsgi_request))
         self.assertEqual(len(messages), 1)
-        self.assertEqual(str(messages[0]), 'Your account has been created successfully. Please login.')
+        self.assertEqual(
+            str(messages[0]),
+            'Your account has been created successfully. Please login.'
+        )
