@@ -158,6 +158,35 @@ Defensive programming was manually tested with the below user acceptance testing
 | As a logged in user, I can update my profile picture so that I can personalize my account. | ![screenshot](documentation/features/feature-userprofile.png) |
 | As a logged in user I can click on a button or link so that I am able to log out of my account. | ![screenshot](documentation/features/feature-logout.png) |
 
+## Automated Testing
+
+I have conducted a series of automated tests on my application.
+
+I fully acknowledge and understand that, in a real-world scenario, an extensive set of additional tests would be more comprehensive.
+
+### Python (Unit Testing)
+
+I have used Django's built-in unit testing framework to test the application functionality.
+
+In order to run the tests, I ran the following command in the terminal each time:
+
+`python3 manage.py test name-of-app `
+
+To create the coverage report, I would then run the following commands:
+
+`coverage run --source=name-of-app manage.py test`
+
+`coverage report`
+
+Below are the results from the various apps on my application that I've tested:
+
+| App | Files tested | Coverage | Screenshot |
+| --- | --- | --- | --- |
+| Accounts | views.py | 100% | ![screenshot](documentation/testing/py-test-accounts.png) |
+| Chat | models.py, views.py | 88% | ![screenshot](documentation/testing/py-test-chat.png) |
+| Chatrooms | models.py, views.py | 94% | ![screenshot](documentation/testing/py-test-chatrooms.png) |
+| Userprofile | models.py, views.py, forms.py | 93% | ![screenshot](documentation/testing/py-test-userprofile.png) |
+
 ## Bugs
 
 | Bug | Screenshots | Solution | Screenshot |
