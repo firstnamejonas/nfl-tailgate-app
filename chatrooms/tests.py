@@ -4,13 +4,19 @@ from django.contrib.auth.models import AnonymousUser
 from .models import Room, Team
 from .views import room_list
 
+
 class RoomModelTest(TestCase):
     def setUp(self):
         """
         Sets up the environment for the tests by creating test objects.
         """
         self.team = Team.objects.create(name='Test Team')
-        self.room = Room.objects.create(name='Test Room', slug='test-room', category='Teams', team=self.team)
+        self.room = Room.objects.create(
+            name='Test Room',
+            slug='test-room',
+            category='Teams',
+            team=self.team
+        )
 
     def test_room_str(self):
         """
@@ -23,9 +29,10 @@ class RoomModelTest(TestCase):
         """
         Checks if the room slug is generated correctly when saving.
         """
-        self.assertEqual(self.room.slug, 'test-room')  # Ensure slug is initially set
-        self.room.save()  # Trigger save method to generate slug
-        self.assertNotEqual(self.room.slug, '')  # Ensure slug is not empty after save
+        self.assertEqual(self.room.slug, 'test-room')
+        self.room.save()
+        self.assertNotEqual(self.room.slug, '')
+
 
 class RoomViewsTest(TestCase):
     def setUp(self):
@@ -33,7 +40,10 @@ class RoomViewsTest(TestCase):
         Set up a test user.
         """
         self.factory = RequestFactory()
-        self.user = User.objects.create_user(username='testuser', password='password')
+        self.user = User.objects.create_user(
+            username='testuser',
+            password='password'
+        )
 
     def test_room_list_view(self):
         """
