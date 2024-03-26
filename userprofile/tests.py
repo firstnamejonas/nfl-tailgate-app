@@ -5,6 +5,7 @@ from .models import Profile
 from chatrooms.models import Team
 from .forms import ProfilePictureForm, FavoriteTeamForm
 
+
 class ProfileModelTest(TestCase):
     def test_profile_str(self):
         """
@@ -16,13 +17,17 @@ class ProfileModelTest(TestCase):
         expected_string = 'testuser1'
         self.assertEqual(str(profile), expected_string)
 
+
 class ProfileViewsTest(TestCase):
     def setUp(self):
         """
         Set up a test client and create necessary objects for testing.
         """
         self.client = Client()
-        self.user = User.objects.create_user(username='testuser2', password='password')
+        self.user = User.objects.create_user(
+            username='testuser2',
+            password='password'
+        )
         self.team = Team.objects.create(name='Test Team')
         self.profile = self.user.profile
 
@@ -40,8 +45,12 @@ class ProfileViewsTest(TestCase):
         Test the user profile view for POST request.
         """
         self.client.force_login(self.user)
-        response = self.client.post(reverse('userprofile'), {'change_picture': '', 'picture': 'test.jpg'})
+        response = self.client.post(
+            reverse('userprofile'),
+            {'change_picture': '', 'picture': 'test.jpg'}
+        )
         self.assertEqual(response.status_code, 302)
+
 
 class ProfileFormsTest(TestCase):
     def test_profile_picture_form(self):
