@@ -27,3 +27,37 @@ class RoomModelTest(TestCase):
         self.room.save()  # Trigger save method to generate slug
         self.assertNotEqual(self.room.slug, '')  # Ensure slug is not empty after save
 
+class RoomViewsTest(TestCase):
+    def setUp(self):
+        """
+        Set up a test user.
+        """
+        self.factory = RequestFactory()
+        self.user = User.objects.create_user(username='testuser', password='password')
+
+    def test_room_list_view(self):
+        """
+        Test the room list view.
+        """
+        request = self.factory.get('/')
+        request.user = self.user
+        response = room_list(request)
+        self.assertEqual(response.status_code, 200)
+
+    def test_room_list_view_anonymous(self):
+        """
+        Test the room list view for anonymous user.
+        """
+        request = self.factory.get('/')
+        request.user = AnonymousUser()
+        response = room_list(request)
+        self.assertEqual(response.status_code, 302)  # Redirect to login page
+
+    def test_room_list_view_with_parameters(self):
+        """
+        Test the room list view with specific parameters.
+        """
+        request = self.factory.get('/?category=Teams')
+        request.user = self.user
+        response = room_list(request)
+        self.assertEqual(response.status_code, 200)
