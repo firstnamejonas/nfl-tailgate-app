@@ -42,3 +42,20 @@ class ProfileViewsTest(TestCase):
         self.client.force_login(self.user)
         response = self.client.post(reverse('userprofile'), {'change_picture': '', 'picture': 'test.jpg'})
         self.assertEqual(response.status_code, 302)
+
+class ProfileFormsTest(TestCase):
+    def test_profile_picture_form(self):
+        """
+        Test the profile picture form.
+        """
+        form = ProfilePictureForm()
+        self.assertFalse(form.is_valid())
+
+    def test_favorite_team_form(self):
+        """
+        Test the favorite team form.
+        """
+        team = Team.objects.create(name='Test Team')
+        data = {'favorite_team': team.id}
+        form = FavoriteTeamForm(data=data)
+        self.assertTrue(form.is_valid())
