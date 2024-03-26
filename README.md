@@ -3,6 +3,7 @@
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/t/firstnamejonas/nfl-tailgate-app)](https://github.com/firstnamejonas/nfl-tailgate-app/commits/main)
 [![GitHub last commit](https://img.shields.io/github/last-commit/firstnamejonas/nfl-tailgate-app)](https://github.com/firstnamejonas/nfl-tailgate-app/commits/main)
 [![GitHub repo size](https://img.shields.io/github/repo-size/firstnamejonas/nfl-tailgate-app)](https://github.com/firstnamejonas/nfl-tailgate-app)
+[![Django TestCase](https://img.shields.io/badge/Coverage-92.6%25-3776AB?logo=python&logoColor=yellow)](TESTING.md#automated-testing)
 
 ## About
 
