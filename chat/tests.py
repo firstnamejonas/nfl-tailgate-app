@@ -31,3 +31,40 @@ class MessageModelTest(TestCase):
         Checks if a user can delete the message.
         """
         self.assertTrue(self.message.can_delete(self.user))
+
+class ChatViewsTest(TestCase):
+    def setUp(self):
+        """
+        Set up a test client and create necessary objects for testing
+        """
+        self.client = Client()
+        self.user = User.objects.create_user(username='testuser', password='password')
+        self.room = Room.objects.create(name='Test Room', slug='test-room')
+        self.message = Message.objects.create(room=self.room, sender=self.user, content='Test message')
+
+    def test_chat_room_view(self):
+        """
+        Test the chat room view
+        """
+        self.client.force_login(self.user)
+        response = self.client.get(reverse('chat:chat_room', kwargs={'room_slug': self.room.slug}))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'chat.html')
+
+    def test_edit_message_view(self):
+        """
+        Test the edit message view
+        """
+        self.client.force_login(self.user)
+        response = self.client.get(reverse('chat:edit_message', kwargs={'message_id': self.message.id}))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'edit_message.html')
+
+    def test_delete_message_view(self):
+        """
+        Test the delete message view
+        """
+        self.client.force_login(self.user)
+        response = self.client.get(reverse('chat:delete_message', kwargs={'message_id': self.message.id}))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'delete_message.html')
