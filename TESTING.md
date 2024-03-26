@@ -105,47 +105,47 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 Defensive programming was manually tested with the below user acceptance testing:
 
-| Page | User Action | Expected Result | Pass/Fail | Comments |
-| --- | --- | --- | --- | --- |
-| All Pages (Logged in User) | --- | --- | --- | --- |
-|  | User clicks on Logo | User gets redirected to the Overview Page of all Chatrooms. | Pass | --- |
-|  | User clicks on User Icon in Navbar | Sidemenu opens. | Pass | --- |
-|  | User clicks on „All Chatrooms“ Link in Menu | User gets redirected to the Overview Page of all Chatrooms. | Pass | --- |
-|  | User clicks on „Your Profile“ Link in Menu | User gets redirected to the users profile page. | Pass | --- |
-|  | User clicks on „Logout“ Button in Menu | User gets redirected to the homepage & is logged out of the account. | Pass | --- |
-| All Pages (Logged out User) | --- | --- | --- | --- |
-|  | User clicks on Logo | User gets redirected to the home page. | Pass | --- |
-|  | User clicks on Menu Icon in Navbar | Sidemenu opens. | Pass | --- |
-|  | User clicks on „Home“ Link in Menu | User gets redirected to the Homepage. | Pass | --- |
-|  | User clicks on „Signup“ Link in Menu | User gets redirected to the Signup Page. | Pass | --- |
-|  | User clicks on „Login“ Link in Menu | User gets redirected to the Login Page. | Pass | --- |
-| Signup | --- | --- | --- | --- |
-|  | User enters Username | Field will accept freeform text | Pass | --- |
-|  | Enter valid (same) password (twice) | Field will only accept password format | Pass | --- |
-|  | Click on „Signup“ button | User gets redirected to the Login page, displays success flash message. | Pass | --- |
-| Login | --- | --- | --- | --- |
-| | Enter valid username | Field will only accept valid username. | Pass | --- |
-| | Enter valid password | Field will only accept password format. | Pass | --- |
-| | Click "Login" button | Redirects user to all chatrooms overview page. | Pass | --- |
-| Overview All Chatrooms | --- | --- | --- | --- |
-|  | If user has chosen favorite Team it displays first / if not flash message to choose team. | Flash message will appear or "Your favorite Team:" + Team Chatroom will appear first. | Pass | --- |
-|  | User clicks "Open Chat" Button. | The chatroom chosen by the users opens. | Pass | --- |
-| Chatroom | --- | --- | --- | --- |
-|  | User clicks on "Back to all Chats" Button. | User gets redirected to all chatrooms overview page. | Pass | --- |
-|  | User clicks on "Refresh" Button. | Chat page reloads & displays new messages in the chatroom. | Pass | --- |
-|  | User writes a message within the textarea-field &. clicks on "Send!" Button. | Content (Message) of the User will display in the chat section for all users to see. | Pass | --- |
-|  | User clicks on edit icon on his own message. | User gets redirected to the Edit Message Page | Pass | --- |
-|  | User clicks on delete icon on his own message. | User gets redirected to the Delete Message Page | Pass | --- |
-| Edit User Message | --- | --- | --- | --- |
-|  | User changes text in the textarea-field & clicks on "Save Changes" Button. | Updated message is displayed in the chatroom for all users to see. | Pass | --- |
-|  | User clicks on "Go Back" Button | User gets redirected to the chatroom page. | Pass | --- |
-| Delete User Message | --- | --- | --- | --- |
-|  | User clicks on "Delete" Button. | User gets redirected to the chat page & the message disappeared from the chatroom. | Pass | --- |
-|  | User clicks on "Go Back" Button | User gets redirected to the chatroom page. | Pass | --- |
-| Userprofile | --- | --- | --- | --- |
-| --- | User clicks on "Choose File" Button. | User can choose a .jpg / .png file to upload. | Pass | --- |
-| --- | User uploads file and clicks on "Change Picture" Button. | User profile picture is updated. | Pass | --- |
-| --- | If user hasn't choose favorite team, dropdown appears to choose favorite team. User can choose and click on "Save Favorite Team" Button. | User profile updates & favorite Team displays with Logo & Name. | Pass | --- |
+| Page | User Action | Expected Result | Pass/Fail |
+| --- | --- | --- | --- |
+| All Pages (Logged in User) | --- | --- | --- |
+|  | User clicks on Logo | User gets redirected to the Overview Page of all Chatrooms. | Pass |
+|  | User clicks on User Icon in Navbar | Sidemenu opens. | Pass |
+|  | User clicks on „All Chatrooms“ Link in Menu | User gets redirected to the Overview Page of all Chatrooms. | Pass |
+|  | User clicks on „Your Profile“ Link in Menu | User gets redirected to the users profile page. | Pass |
+|  | User clicks on „Logout“ Button in Menu | User gets redirected to the homepage & is logged out of the account. | Pass |
+| All Pages (Logged out User) | --- | --- | --- |
+|  | User clicks on Logo | User gets redirected to the home page. | Pass |
+|  | User clicks on Menu Icon in Navbar | Sidemenu opens. | Pass |
+|  | User clicks on „Home“ Link in Menu | User gets redirected to the Homepage. | Pass |
+|  | User clicks on „Signup“ Link in Menu | User gets redirected to the Signup Page. | Pass |
+|  | User clicks on „Login“ Link in Menu | User gets redirected to the Login Page. | Pass |
+| Signup | --- | --- | --- |
+|  | User enters Username | Field will accept freeform text | Pass |
+|  | Enter valid (same) password (twice) | Field will only accept password format | Pass |
+|  | Click on „Signup“ button | User gets redirected to the Login page, displays success flash message. | Pass |
+| Login | --- | --- | --- |
+| | Enter valid username | Field will only accept valid username. | Pass |
+| | Enter valid password | Field will only accept password format. | Pass |
+| | Click "Login" button | Redirects user to all chatrooms overview page. | Pass |
+| Overview All Chatrooms | --- | --- | --- |
+|  | If user has chosen favorite Team it displays first / if not flash message to choose team. | Flash message will appear or "Your favorite Team:" + Team Chatroom will appear first. | Pass |
+|  | User clicks "Open Chat" Button. | The chatroom chosen by the users opens. | Pass |
+| Chatroom | --- | --- | --- |
+|  | User clicks on "Back to all Chats" Button. | User gets redirected to all chatrooms overview page. | Pass |
+|  | User clicks on "Refresh" Button. | Chat page reloads & displays new messages in the chatroom. | Pass |
+|  | User writes a message within the textarea-field &. clicks on "Send!" Button. | Content (Message) of the User will display in the chat section for all users to see. | Pass |
+|  | User clicks on edit icon on his own message. | User gets redirected to the Edit Message Page | Pass |
+|  | User clicks on delete icon on his own message. | User gets redirected to the Delete Message Page | Pass |
+| Edit User Message | --- | --- | --- |
+|  | User changes text in the textarea-field & clicks on "Save Changes" Button. | Updated message is displayed in the chatroom for all users to see. | Pass |
+|  | User clicks on "Go Back" Button | User gets redirected to the chatroom page. | Pass |
+| Delete User Message | --- | --- | --- |
+|  | User clicks on "Delete" Button. | User gets redirected to the chat page & the message disappeared from the chatroom. | Pass |
+|  | User clicks on "Go Back" Button | User gets redirected to the chatroom page. | Pass |
+| Userprofile | --- | --- | --- |
+| --- | User clicks on "Choose File" Button. | User can choose a .jpg / .png file to upload. | Pass |
+| --- | User uploads file and clicks on "Change Picture" Button. | User profile picture is updated. | Pass |
+| --- | If user hasn't choose favorite team, dropdown appears to choose favorite team. User can choose and click on "Save Favorite Team" Button. | User profile updates & favorite Team displays with Logo & Name. | Pass |
 
 ## User Story Testing
 
