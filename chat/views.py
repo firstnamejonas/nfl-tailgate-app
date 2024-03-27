@@ -34,7 +34,10 @@ def chat_room(request, room_slug):
         message.editable = message.can_edit(request.user)
         message.deletable = message.can_delete(request.user)
 
-    return render(request, 'chat.html', {'room': room, 'chat_messages': chat_messages})
+    return render(
+        request, 'chat.html',
+        {'room': room, 'chat_messages': chat_messages}
+    )
 
 
 @login_required
