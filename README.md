@@ -170,6 +170,9 @@ There, I used my own **User Story Template** to manage user stories.
 
 - [Open Issues](https://github.com/firstnamejonas/nfl-tailgate-app/issues) [![GitHub issues](https://img.shields.io/github/issues/firstnamejonas/nfl-tailgate-app)](https://github.com/firstnamejonas/nfl-tailgate-app/issues)
 
+> [!NOTE]  
+> All remaining open issues are 'Won't Have' issues, which form the Future Features. For more information about the Future Features [click here](README.md#future-features).
+
 - [Closed Issues](https://github.com/firstnamejonas/nfl-tailgate-app/issues?q=is%3Aissue+is%3Aclosed) [![GitHub closed issues](https://img.shields.io/github/issues-closed/firstnamejonas/nfl-tailgate-app)](https://github.com/firstnamejonas/nfl-tailgate-app/issues?q=is%3Aissue+is%3Aclosed)
 
 ### MoSCoW Prioritization
